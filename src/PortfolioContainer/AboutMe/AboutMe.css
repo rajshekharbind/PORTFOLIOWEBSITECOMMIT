@@ -1,0 +1,96 @@
+/* AboutMe.css */
+
+
+.about-me {
+  background-color: #f5f5f5;
+    font-family: 'Arial, sans-serif';
+    padding: 2rem;
+    text-align: center;
+    background-color: #f0f4f8;
+  }
+  
+  .intro {
+    margin-bottom: 2rem;
+  }
+  
+  .intro h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4caf50;
+    text-decoration: underline;
+  }
+  
+  .intro h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .navigation-links {
+    margin-bottom: 1.5rem;
+  }
+  
+  .navigation-links button {
+    background-color: #f0f4f8;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    color: #4caf50;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navigation-links button.active,
+  .navigation-links button:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .styled-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+  }
+  
+  .styled-box h2 {
+    color: #4caf50;
+  }
+  
+  .styled-box p,
+  .styled-box ul {
+    color: #555;
+  }
+  
+  .styled-box ul {
+    list-style: square;
+    margin-left: 1.5rem;
+  }
+  
+  .styled-box a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .styled-box a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .styled-box {
+      width: 90%;
+    }
+  
+    .navigation-links button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+  
+  

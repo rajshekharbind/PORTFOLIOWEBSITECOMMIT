@@ -1,0 +1,92 @@
+/* ContactMe.css */
+.contact-me {
+  
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-me h2 {
+    text-align: center;
+   font-size: 2.5rem;
+   color: #4caf50;
+   text-decoration: underline;
+
+  }
+  
+  .contact-me form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-me label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .contact-me input,
+  .contact-me textarea {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .contact-me button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-me button:nth-child(1) {
+    background-color: #25d366; /* WhatsApp green */
+  }
+  
+  .contact-me button:nth-child(1):hover {
+    background-color: #1da851;
+  }
+  
+  .contact-me button:nth-child(2) {
+    background-color: #0072c6; /* Email blue */
+  }
+  
+  .contact-me button:nth-child(2):hover {
+    background-color: #005bb5;
+  }
+  .success-message {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    border-radius: 5px;
+    font-size: 16px;
+    animation: fadeOut 3s ease-in-out forwards;
+  }
+  
+  /* Fading out animation */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
