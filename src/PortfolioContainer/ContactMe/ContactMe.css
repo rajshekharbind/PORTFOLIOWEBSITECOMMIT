@@ -1,5 +1,5 @@
 /* ContactMe.css */
-.contact-me {
+/* .contact-me {
   
     max-width: 600px;
     margin: 2rem auto;
@@ -54,7 +54,7 @@
   }
   
   .contact-me button:nth-child(1) {
-    background-color: #25d366; /* WhatsApp green */
+    background-color: #25d366; /* WhatsApp green 
   }
   
   .contact-me button:nth-child(1):hover {
@@ -62,7 +62,7 @@
   }
   
   .contact-me button:nth-child(2) {
-    background-color: #0072c6; /* Email blue */
+    background-color: #0072c6; /* Email blue 
   }
   
   .contact-me button:nth-child(2):hover {
@@ -79,7 +79,7 @@
     animation: fadeOut 3s ease-in-out forwards;
   }
   
-  /* Fading out animation */
+  /* Fading out animation 
   @keyframes fadeOut {
     0% {
       opacity: 1;
@@ -89,4 +89,176 @@
     }
   }
   
-  
+   */
+
+   /* Contact Me Section */
+.contact-me {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color:rgb(30, 30, 71);
+  //background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-me:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Me Heading */
+.contact-me h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.contact-me form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Labels */
+.contact-me label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  width: 100%;
+}
+
+/* Input & Textarea Styling */
+.contact-me input,
+.contact-me textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+
+/* Input Focus Effect */
+.contact-me input:focus,
+.contact-me textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Contact Buttons Container */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.contact-me button {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* WhatsApp Button */
+.contact-me button:nth-child(1) {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.contact-me button:nth-child(1):hover {
+  background: linear-gradient(135deg, #1da851, #075e54);
+  transform: scale(1.05);
+}
+
+/* Email Button */
+.contact-me button:nth-child(2) {
+  background: linear-gradient(135deg, #0072c6, #005bb5);
+}
+
+.contact-me button:nth-child(2):hover {
+  background: linear-gradient(135deg, #005bb5, #003d82);
+  transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 20px;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-me {
+      max-width: 90%;
+      padding: 1.5rem;
+  }
+
+  .contact-me h2 {
+      font-size: 2rem;
+  }
+
+  .contact-me input,
+  .contact-me textarea {
+      font-size: 1rem;
+      padding: 10px;
+  }
+
+  .contact-me button {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-me h2 {
+      font-size: 1.8rem;
+  }
+
+  .contact-me input,
+  .contact-me textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
+
+  .contact-me button {
+      font-size: 0.8rem;
+      padding: 8px;
+  }
+}

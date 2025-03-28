@@ -7,25 +7,7 @@ const Profile = () => {
       <div className='profile-parent'>
         <div className='profile-details'>
           <div className='colz'>
-            <div className="colz-icon">
-
-           
-            <a href="https://www.linkedin.com/in/raj-shekhar-92012a298/">
-              <i className='fa fa-linkedin-square'></i>
-            </a>
-            <a href="https://github.com/rajshekharbind">
-              <i className='fa fa-github-square'></i>
-            </a>
-            <a href="https://www.instagram.com/raju.rajsekhar123/">
-              <i className='fa fa-instagram'></i>
-            </a>
-            <a href="#">
-              <i className='fa fa-youtube-square'></i>
-            </a>
-            <a href="#">
-              <i className='fa fa-twitter'></i>
-            </a>
-          </div>
+          
           </div>
 
           <div className='profile-details-name'>
@@ -54,9 +36,13 @@ const Profile = () => {
                   delaySpeed={1000}
                 />
               </h1>
-              <span className='profile-role-tagline'>
-               knack is building application with front and back end operation..
-              </span>
+              <span className="profile-role-tagline">
+  Knack for building applications with front-end and back-end operations.  
+  <br />
+  Passionate B.Tech student skilled in full-stack development<br />
+  and competitive programming. Enthusiastic about web technologies,<br />
+    problem-solving, and creating impactful digital experiences..
+</span>
             </span>
           </div>
           <div className='profile-option'>
@@ -64,7 +50,7 @@ const Profile = () => {
               {" "}
               Hire Me{" "}
             </button>
-            <a href="myresume.pdf" download='myresume.pdf'>
+            <a href="/myresume.pdf" download='myresume.pdf'>
               <button className='btn highlighted-btn'>
                Get Resume
               </button>
@@ -72,8 +58,28 @@ const Profile = () => {
           </div>
         </div>
           <div className="profile-picture">
+            
             <div className="profile-picture-background">
+            <div className="colz-icon">
 
+         <div className='ab'> 
+<a href="https://www.linkedin.com/in/raj-shekhar-92012a298/">
+  <i className='fa fa-linkedin-square'></i>
+</a>
+<a href="https://github.com/rajshekharbind">
+  <i className='fa fa-github-square'></i>
+</a>
+<a href="https://www.instagram.com/raju.rajsekhar123/">
+  <i className='fa fa-instagram'></i>
+</a>
+<a href="#">
+  <i className='fa fa-youtube-square'></i>
+</a>
+<a href="#">
+  <i className='fa fa-twitter'></i>
+</a>
+</div> 
+</div>
             </div>
           </div>
       </div>

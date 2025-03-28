@@ -69,14 +69,8 @@
     transform: 1s ease-out;
 
 }
-.colz .colz-icon i{
-    color:white;
-    padding:8px;
-    padding-left:0px;
-}
-.colz .colz-icon i:hover{
-    transform:scale(1.5);
-}
+
+
 @media screen and (max-width:1110px){
     .profile-picture{
         margin:0 0px 0 80px;
@@ -133,5 +127,59 @@
     width:90%;
 
 }
+}
+
+/* Social Icons Container */
+.colz {
+    display: flex;
+    justify-content: center; /* Center align below profile image */
+    margin-top: 15px; /* Adjust spacing */
+}
+
+/* Icon Styling */
+.ab {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    margin-top: 370px;
+}
+
+/* Icon Properties */
+.ab a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Uniform size */
+    height: 50px;
+    font-size: 24px;
+    color: white; /* Default icon color */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 5px 10px rgba(255, 126, 95, 0.4); /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Fancy Hover Effect */
+.ab a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 15px rgba(255, 126, 95, 0.6); /* Stronger shadow */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .colz {
+        flex-direction: row; /* Keeps icons in one line */
+        flex-wrap: wrap; /* Wrap if necessary */
+    }
+
+    .ab a {
+        width: 45px; /* Slightly smaller for mobile */
+        height: 45px;
+        font-size: 22px;
+    }
 }
 

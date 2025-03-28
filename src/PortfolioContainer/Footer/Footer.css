@@ -1,0 +1,96 @@
+.footer-container1 {
+  background-color: rgb(30, 30, 71);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.footer-title1 {
+  font-size: 2rem;
+  font-weight: bold; /* Makes text bold */
+  color: white; /* Sets text color to white */
+  text-align: center; /* Ensures it's centered */
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Footer Title with Underline */
+
+
+.footer-title1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: white;
+  margin: 8px auto 15px;
+  border-radius: 2px;
+}
+
+.footer-text1 {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Social Media Hover Colors */
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: #6e5494;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}
+
+.instagram:hover {
+  color: #e1306c;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+/* Full-width Underline */
+.footer-underline {
+  width: 100%; /* Full width */
+  height: 3px;
+  background-color: white;
+  margin: 15px 0;
+  border: none;
+  opacity: 0.7;
+}

@@ -1,0 +1,110 @@
+.skills-container {
+    text-align: center;
+    background-color:rgb(30, 30, 71);
+    color: #ffffff;
+    padding: 50px 20px;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-title:hover {
+    transform: scale(1.05);
+    color: #00c8ff; /* Optional: Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-title {
+        font-size: 1.8rem;
+    }
+}
+
+.skills-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Grid layout to align frontend-left and backend-right */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Styles for each section */
+.skills-section {
+    width: 45%;
+    background-color: #1e1e2f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+}
+
+.skills-category {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Display skills in a responsive grid */
+.skills-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+/* Skill card with hover effects */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #21262d;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.skill-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skill-name {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-section {
+        width: 90%;
+    }
+}
