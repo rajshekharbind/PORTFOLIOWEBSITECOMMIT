@@ -58,6 +58,7 @@
   color: #00c6ff;
   cursor: pointer;
   z-index: 2001;
+  margin-right:35px;
 }
 
 /* Navbar Links */
@@ -102,6 +103,28 @@
     display: block;
     height:20px;
     width:20px;
+    .navbar-links {
+  /* Existing styles... */
+  max-height: 80vh; /* So it doesn't take entire screen */
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 transparent; /* For Firefox */
+}
+
+/* WebKit Scrollbar Styling */
+.navbar-links::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navbar-links::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.navbar-links::-webkit-scrollbar-track {
+  background: transparent;
+}
+
   }
 
   .navbar-links {
@@ -153,6 +176,7 @@
     color: #00c6ff;
     cursor: pointer;
     z-index: 2001;
+    margin-right:30px;
   }
 }
 /* Mobile Menu - 3D Animated Box */
@@ -171,6 +195,7 @@
       color: #00c6ff;
       cursor: pointer;
       z-index: 2001;
+      margin-right:30px;
     }
   }
   .navbar-links {
@@ -230,5 +255,30 @@
 
   .navbar-links li {
     font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    /* Existing styles already present */
+    max-height: 80vh; /* limit vertical space */
+    overflow-y: auto;
+
+    /* Scrollbar styling for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  }
+
+  /* Scrollbar styling for WebKit (Chrome, Safari, Edge) */
+  .navbar-links::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .navbar-links::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+
+  .navbar-links::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
