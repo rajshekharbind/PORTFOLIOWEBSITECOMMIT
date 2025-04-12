@@ -1,6 +1,6 @@
 .project-section {
   padding: 20px;
- 
+  perspective: 1000px;
   background-color:rgb(30, 30, 71);
 }
 
@@ -44,17 +44,30 @@
 }
 
 .project-item {
+ 
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transform: rotateX(0) rotateY(0) scale(1);
+}
+
+.project-item:hover {
+  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.05);
 }
 
 .project-item img {
+ 
+  transition: transform 0.3s ease;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  backface-visibility: hidden;
 }
 
 .project-item:hover img {
@@ -87,4 +100,104 @@
 
 .overlay p {
   color: #ccc;
+}
+.project-section {
+  padding: 20px;
+  background-color: rgb(30, 30, 71);
+  perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.project-item:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  backface-visibility: hidden;
+}
+
+.project-item:hover img {
+  transform: scale(1.1) translateZ(20px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(76,175,80,0.9) 0%, rgba(33,150,243,0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateZ(30px);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+.project-item:hover .overlay {
+  opacity: 1;
+  transform: translateZ(60px);
+}
+
+/* Add depth effect to different project items */
+.project-item-0 { transform: translateZ(0px); }
+.project-item-1 { transform: translateZ(5px); }
+.project-item-2 { transform: translateZ(10px); }
+
+.project-item:hover .project-item-0,
+.project-item:hover .project-item-1,
+.project-item:hover .project-item-2 {
+  transform: translateZ(20px);
+}
+
+/* Add entrance animation */
+@keyframes projectEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  animation: projectEntrance 0.6s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Add 3D rotation effect */
+.project-item:hover {
+  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.05);
 }

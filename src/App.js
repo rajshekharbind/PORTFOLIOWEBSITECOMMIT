@@ -38,7 +38,7 @@ import ProjectSection from "./PortfolioContainer/ProjectSection/ProjectSection";
 import AboutMe from "./PortfolioContainer/AboutMe/AboutMe";
 import Skills from "./PortfolioContainer/Skills/Skills";
 import Footer from "./PortfolioContainer/Footer/Footer";
-import ProgressBar from "./PortfolioContainer/Experience/ProgressBar";
+//import ProgressBar from "./PortfolioContainer/Experience/ProgressBar";
 
 function App() {
   return (
@@ -60,7 +60,7 @@ function App() {
       <section id="skills">
         <Skills />
       </section>
-      <ProgressBar />
+      {/* <ProgressBar /> */}
 
       <section id="contact">
         <ContactMe />

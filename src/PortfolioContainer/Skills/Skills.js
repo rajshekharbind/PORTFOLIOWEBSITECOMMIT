@@ -32,7 +32,54 @@ const skills = [
        { name: "Git", img: "https://img.icons8.com/?size=96&id=20906&format=png" },
        { name: "Postman Api", img: "https://img.icons8.com/?size=128&id=QEQQKirln6Tf&format=png" },
     ],
+    
   },
+  {
+    category: "Programming",
+    items: [
+      {
+        name: "C Programming",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"
+      },
+      {
+        name: "C++",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+      },
+      {
+        name: "Python",
+        img: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+      },
+      {
+        name: "DSA",
+        img: "https://img.icons8.com/external-flat-icons-inmotus-design/67/external-data-structure-data-science-flat-icons-inmotus-design.png"
+      },
+      {
+        name: "Competitive Programming",
+        img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-coding-computer-programming-flaticons-flat-flat-icons.png"
+      },
+      // {
+      //   name: "Replit",
+      //   img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Replit_logo.png"
+      // },
+      {
+        name: "Cloudinary",
+        img: "https://th.bing.com/th/id/OIP.bWgmv2jg_WjLuIMESDqFBQAAAA?w=310&h=178&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      },
+      {
+        name: "Git",
+        img: "https://img.icons8.com/?size=96&id=20906&format=png"
+      },
+      {
+        name: "GitHub",
+        img: "https://img.icons8.com/?size=96&id=63777&format=png"
+      },
+      {
+        name: "Postman API",
+        img: "https://img.icons8.com/?size=128&id=QEQQKirln6Tf&format=png"
+      }
+    ]
+  }
+  
 ];
 
 const Skills = () => {

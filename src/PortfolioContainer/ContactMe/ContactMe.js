@@ -45,6 +45,8 @@ const ContactMe = () => {
     }, 3000); // Notification disappears after 3 seconds
   };
 
+
+  
   return (
     <div className="contact-me" id="contact">
       <h2>***Contact Me***</h2>

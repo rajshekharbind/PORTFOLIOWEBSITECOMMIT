@@ -23,41 +23,48 @@
 // export default Navbar;
 
 
-import React from "react";
-import { Link } from "react-scroll"; // Import react-scroll for smooth scrolling
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Navbar.css";
+import { RiMenu2Fill } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <h1>My-Portfolio</h1>
       </div>
-      <ul className="navbar-links">
+
+      <div className="menu-icon" onClick={toggleMenu}>
+        {menuOpen ? <RiCloseFill size={28} /> : <RiMenu2Fill size={28} />}
+      </div>
+
+      <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link to="home" smooth={true} duration={800} offset={-70}>
-            Home
-          </Link>
+          <Link to="home" smooth duration={800} offset={-70} onClick={closeMenu}>Home</Link>
         </li>
         <li>
-          <Link to="about" smooth={true} duration={800} offset={-70}>
-            About
-          </Link>
+          <Link to="about" smooth duration={800} offset={-70} onClick={closeMenu}>About</Link>
         </li>
         <li>
-          <Link to="projects" smooth={true} duration={800} offset={-70}>
-            Projects
-          </Link>
+          <Link to="projects" smooth duration={800} offset={-70} onClick={closeMenu}>Projects</Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} duration={800} offset={-70}>
-            Skills
-          </Link>
+          <Link to="skills" smooth duration={800} offset={-70} onClick={closeMenu}>Skills</Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={800} offset={-70}>
-            ContactMe
-          </Link>
+          <Link to="contact" smooth duration={800} offset={-70} onClick={closeMenu}>ContactMe</Link>
         </li>
       </ul>
     </nav>
@@ -65,6 +72,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 

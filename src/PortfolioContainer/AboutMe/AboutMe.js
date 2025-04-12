@@ -56,8 +56,8 @@ const AboutMe = () => {
             <p>Mobile No: <a href="tel:+91 9170879955">+91 9170879 955</a></p>
             <p>Message: <a href="sms:+91 9170879955">Send SMS</a></p>
             <p>Chat on WhatsApp: <a href="https://wa.me/9170879955" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
-            <p>Email: <a href="mailto:example@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/raj-shekhar-92012a298/" target="_blank" rel="noopener noreferrer">Your Profile</a></p>
+            <p>Email: <a href="mailto:example@example.com">raju.rajsekhar123@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/raj-shekhar-92012a298/" target="_blank" rel="noopener noreferrer">My Profile</a></p>
           </div>
         );
       default:
