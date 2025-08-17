@@ -93,7 +93,8 @@ const ProjectSection = () => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
-    //const centerY = rect.height / 2;
+    
+    const centerY = rect.height / 2;
     
     const rotateY = (x - centerX) / 10;
     const rotateX = (centerY - y) / 10;
