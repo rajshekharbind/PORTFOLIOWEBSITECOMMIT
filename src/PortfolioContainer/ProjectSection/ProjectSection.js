@@ -96,8 +96,8 @@ const ProjectSection = () => {
     
     const centerY = rect.height / 2;
     
-    // const rotateY = (x - centerX) / 10;
-    // const rotateX = (centerY - y) / 10;
+    const rotateY = (x - centerX) / 10;
+    const rotateX = (centerY - y) / 10;
 
     projectItem.style.setProperty('--rotate-x', `${rotateX}deg`);
     projectItem.style.setProperty('--rotate-y', `${rotateY}deg`);
