@@ -1,21 +1,17 @@
 .project-section {
   padding: 20px;
-  perspective: 1000px;
-  background-color:rgb(30, 30, 71);
+  background-color: rgb(30, 30, 71);
+  perspective: 1000px; /* Perspective for 3D effect */
 }
 
- .project-section h2{
+.project-section h2 {
   text-align: center;
-     /* Ensure the heading fits its content */
-  text-align: center; 
   font-size: 2.5rem;
   color: #4caf50;
   text-decoration: underline;
-} 
+}
 
-
-
-
+/* Tabs */
 .project-tabs {
   display: flex;
   justify-content: center;
@@ -29,7 +25,11 @@
   background-color: #f0f0f0;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
 }
 
 .tab-button.active {
@@ -37,96 +37,39 @@
   color: #fff;
 }
 
+/* Project Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  animation: projectEntrance 0.6s ease-out forwards;
 }
 
+/* Project Card */
 .project-item {
- 
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.4s ease;
   cursor: pointer;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   transform: rotateX(0) rotateY(0) scale(1);
 }
 
+/* 3D Rotation Effect */
 .project-item:hover {
-  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.05);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
 }
 
-.project-item img {
- 
-  transition: transform 0.3s ease;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  backface-visibility: hidden;
-}
-
-.project-item:hover img {
-  transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-item:hover .overlay {
-  opacity: 1;
-}
-
-.overlay h3 {
-  color: #fff;
-  margin: 0;
-}
-
-.overlay p {
-  color: #ccc;
-}
-.project-section {
-  padding: 20px;
-  background-color: rgb(30, 30, 71);
-  perspective: 1000px; /* Add perspective for 3D effect */
-}
-
-.project-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  transform-style: preserve-3d;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  cursor: pointer;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-.project-item:hover {
-  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
-}
-
+/* Project Images */
 .project-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   backface-visibility: hidden;
 }
 
@@ -134,20 +77,25 @@
   transform: scale(1.1) translateZ(20px);
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(76,175,80,0.9) 0%, rgba(33,150,243,0.9) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(76, 175, 80, 0.9) 0%,
+    rgba(33, 150, 243, 0.9) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transform: translateZ(30px);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
   backface-visibility: hidden;
   pointer-events: none;
 }
@@ -157,7 +105,18 @@
   transform: translateZ(60px);
 }
 
-/* Add depth effect to different project items */
+.overlay h3 {
+  color: #fff;
+  margin: 5px 0;
+}
+
+.overlay p {
+  color: #ccc;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Depth Effect per Item */
 .project-item-0 { transform: translateZ(0px); }
 .project-item-1 { transform: translateZ(5px); }
 .project-item-2 { transform: translateZ(10px); }
@@ -168,36 +127,14 @@
   transform: translateZ(20px);
 }
 
-/* Add entrance animation */
+/* Entrance Animation */
 @keyframes projectEntrance {
   from {
     opacity: 0;
-    transform: translateY(50px) rotateX(-30deg);
+    transform: translateY(50px) rotateX(-20deg);
   }
   to {
     opacity: 1;
     transform: translateY(0) rotateX(0);
   }
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  animation: projectEntrance 0.6s ease-out forwards;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Add 3D rotation effect */
-.project-item:hover {
-  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.05);
 }
