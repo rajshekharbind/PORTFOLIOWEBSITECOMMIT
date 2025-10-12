@@ -99,7 +99,7 @@ const projects = [
     title: 'Algorithm Master Certificate',
     description: 'Certified in advanced algorithms and data structures from AlgoExpert platform.',
     image: '/ProjectSection/Algocertificate.jpg', 
-    liveLink: 'https://certificate-link.com',
+    liveLink: '/ProjectSection/Algocertificate.jpg',
     technologies: ['Algorithms', 'Data Structures'],
     featured: false
   },
@@ -109,6 +109,7 @@ const projects = [
     title: 'Full Stack Development',
     description: 'Bachelor of Technology in Computer Science with specialization in Full Stack Development.',
     image: '../ProjectSection/1743074398437-certificate.png', 
+    liveLink: '../ProjectSection/1743074398437-certificate.png',
     technologies: ['Computer Science', 'Web Development'],
     featured: false
   },
@@ -129,7 +130,7 @@ const projects = [
     title: 'Generative AI Certification',
     description: 'Completed comprehensive course on Generative AI and Machine Learning concepts.',
     image: '/ProjectSection/generative_ai.png', 
-    liveLink: 'https://certificate-link.com',
+    liveLink: '/ProjectSection/generative_ai.png',
     technologies: ['AI', 'Machine Learning'],
     featured: false
   },
@@ -139,6 +140,7 @@ const projects = [
     title: 'Frontend Development',
     description: 'Advanced frontend development certification focusing on modern JavaScript frameworks.',
     image: '../ProjectSection/Screenshot 2025-03-23 154040.png', 
+    liveLink: '../ProjectSection/Screenshot 2025-03-23 154040.png',
     technologies: ['JavaScript', 'React', 'Vue'],
     featured: false
   },
@@ -159,7 +161,7 @@ const projects = [
     title: 'Google Cloud Certified',
     description: 'Google Cloud Platform certification demonstrating expertise in cloud infrastructure and services.',
     image: '/ProjectSection/gsokcertificate.jpg', 
-    liveLink: 'https://certificate-link.com',
+    liveLink: '/ProjectSection/gsokcertificate.jpg',
     technologies: ['GCP', 'Cloud Computing'],
     featured: false
   },
@@ -169,6 +171,7 @@ const projects = [
     title: 'Backend Development',
     description: 'Specialized in backend technologies including Node.js, Express, and database management.',
     image: '../ProjectSection/image.png', 
+    liveLink: '../ProjectSection/image.png',
     technologies: ['Node.js', 'Express', 'SQL'],
     featured: false
   },
@@ -178,7 +181,7 @@ const projects = [
     title: 'AWS Solutions Architect',
     description: 'AWS Certified Solutions Architect with expertise in cloud architecture and deployment.',
     image: './ProjectSection/Screenshot 2025-04-08 203135.png', 
-    liveLink: 'https://certificate-link.com',
+    liveLink: './ProjectSection/Screenshot 2025-04-08 203135.png',
     technologies: ['AWS', 'Cloud Architecture'],
     featured: false
   },

@@ -582,7 +582,7 @@ const Profile = () => {
               {" "}
               Hire Me{" "}
             </button>
-            <a href="/myresume.pdf" download='myresume.pdf'>
+            <a href="/resume-rajshekhar.pdf" download='resume-rajshekhar.pdf'>
               <button 
                 className='btn highlighted-btn'
                 ref={addButtonToRefs}

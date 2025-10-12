@@ -25,7 +25,7 @@ const AboutMe = () => {
   // Preload image and handle loading states
   useEffect(() => {
     const img = new Image();
-    img.src = '/images/raj1.png';
+    img.src = '../ProjectSection/raj1.png';
     img.loading = 'eager'; // Force eager loading
     
     img.onload = () => {
@@ -404,7 +404,7 @@ const AboutMe = () => {
               
               <div className="description-grid">
                 <p className="intro-text">
-                  I am a passionate 2nd-year Computer Science Engineering student at 
+                  I am a passionate 3rd-year Computer Science Engineering student at 
                   <strong> Indian Institute of Information Technology, Bhagalpur</strong>, 
                   dedicated to crafting exceptional digital experiences.
                 </p>
